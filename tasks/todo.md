@@ -85,18 +85,18 @@ Use the AI Anime Storytelling Workflow skill to plan, prompt, generate, and orga
 
 ## Phase 5 — Edit + Delivery
 
-- [ ] Assemble clip/audio references.
-- [ ] Create final edit or edit plan.
-- [ ] Export deliverable(s) into `07-deliverables/`.
-- [ ] Document final prompts, seeds, tools, and file paths.
+- [x] Assemble clip/audio references.
+- [x] Create final edit or edit plan.
+- [x] Export deliverable(s) into `07-deliverables/`.
+- [x] Document final prompts, seeds, tools, and file paths.
 
 ## Verification Checklist
 
-- [ ] Character identity is consistent across image and video prompts.
-- [ ] Negative constraints are present.
-- [ ] Runtime and aspect ratio match target platform.
-- [ ] Generated files are saved and named predictably.
-- [ ] Final output can be reproduced from stored prompts and references.
+- [x] Character identity is consistent across image and video prompts.
+- [x] Negative constraints are present.
+- [x] Runtime and aspect ratio match target platform.
+- [x] Generated files are saved and named predictably.
+- [x] Final output can be reproduced from stored prompts and references.
 
 ## Review / Results
 
@@ -133,3 +133,5 @@ Processed existing source docs into project setup, series brief, episode product
 2026-06-16 Seedance run 01: created `01-prompts/episode-01-arterial-nightmare/seedance-input.json` using the public GitHub keyframe URL. First RunComfy attempt with `bytedance/seedance-v2/pro` failed with 404; live RunComfy docs show the API model id is `bytedance/seedance-2.0/pro`. Reran successfully with request ID `6f21c6f0-4a25-49ee-b720-ac33b9323f5d`. Downloaded `04-generations/video/episode-01/e5ef985b222de7858d80763a7873b4a3_1781627474_siay9jex.mp4`, 1280x720, 24 fps, 15.092971s, AAC audio, SHA-256 `bbbda4f8f77107f12597f56f07c064435e5326fdab07cfeeb5af007e2e0856e3`. Logged result at `logs/2026-06-16-episode-01-seedance-run-01.md`.
 
 2026-06-16 Audio generation pass: generated Episode 01 score via ElevenLabs Music on RunComfy (`elevenlabs/elevenlabs/music-generation`, request ID `f4bc9b6a-dda7-4340-afd0-c0cdb8989f8b`). Generated Pichet voice line via Composio ElevenLabs TTS using Chris voice (charming, down-to-earth). Generated Maya voice line using Jessica voice (playful, bright, warm). All three audio files stored under `04-generations/audio/episode-01/`: score (15.05s), Pichet line (5.80s), Maya line (2.88s). Logged result at `logs/2026-06-16-episode-01-audio-generation.md`.
+
+2026-06-16 Final delivery pass: created edit plan at `05-edits/episode-01-edit-plan.md` with timeline for score (full length at -6dB), Pichet voice (2.0s start), and Maya voice (10.5s start). Mixed video with audio using FFmpeg. Exported `07-deliverables/episode-01-the-dream-in-the-artery-v1.mp4`, 1280x720, 15.04s, 7246919 bytes, SHA-256 `69cecb800df23d6a8ced969211c096d0d515a6ce17fa9eaabaea6cc3c1dea5cd`. Episode 01 proof-of-world complete.
