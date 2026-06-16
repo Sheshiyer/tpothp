@@ -68,13 +68,13 @@ Use the AI Anime Storytelling Workflow skill to plan, prompt, generate, and orga
 ## Phase 3 — Video Generation Prompts
 
 - [x] Draft Seedance 2.0 / image-to-video prompt.
-- [ ] Attach generated character/storyboard image as strict visual reference.
+- [x] Attach generated character/storyboard image as strict visual reference.
 - [x] Check RunComfy auth with `runcomfy whoami`.
 - [x] Create dry-run Seedance input template.
 - [x] Create public GitHub repo for Seedance keyframe hosting.
 - [x] Verify public raw GitHub keyframe URL.
-- [ ] Generate first 4–15s clip via RunComfy Seedance 2.0 Pro.
-- [ ] Store generated videos under `04-generations/video/`.
+- [x] Generate first 4–15s clip via RunComfy Seedance 2.0 Pro.
+- [x] Store generated videos under `04-generations/video/`.
 
 ## Phase 4 — Audio / Voice / Music
 
@@ -129,3 +129,5 @@ Processed existing source docs into project setup, series brief, episode product
 2026-06-16 Seedance keyframe generation: first Codex request failed with server overload, one retry succeeded. Generated `04-generations/images/episode-01-seedance-keyframe-01.png` at 1672x941, 2637233 bytes, SHA-256 `6eb7361fae1df09a72aae6b0cf890c608048645ad44d7bf1b3816663e9be857f`. Logged result at `logs/2026-06-16-episode-01-seedance-keyframe-01.md`. This is now the best local image reference for the first Seedance run after hosting/uploading to a public URL.
 
 2026-06-16 GitHub public repo pass: initialized a nested repo for the TPoTHP workspace, curated the public surface with `.gitignore`, created `Sheshiyer/tpothp` as a public GitHub repository, pushed `main`, and verified the raw keyframe URL returns `200 image/png`. Public Seedance keyframe URL: `https://raw.githubusercontent.com/Sheshiyer/tpothp/main/04-generations/images/episode-01-seedance-keyframe-01.png`. Logged result at `logs/2026-06-16-github-public-repo.md`.
+
+2026-06-16 Seedance run 01: created `01-prompts/episode-01-arterial-nightmare/seedance-input.json` using the public GitHub keyframe URL. First RunComfy attempt with `bytedance/seedance-v2/pro` failed with 404; live RunComfy docs show the API model id is `bytedance/seedance-2.0/pro`. Reran successfully with request ID `6f21c6f0-4a25-49ee-b720-ac33b9323f5d`. Downloaded `04-generations/video/episode-01/e5ef985b222de7858d80763a7873b4a3_1781627474_siay9jex.mp4`, 1280x720, 24 fps, 15.092971s, AAC audio, SHA-256 `bbbda4f8f77107f12597f56f07c064435e5326fdab07cfeeb5af007e2e0856e3`. Logged result at `logs/2026-06-16-episode-01-seedance-run-01.md`.

@@ -60,7 +60,7 @@ runcomfy whoami
 Run pattern:
 
 ```bash
-runcomfy run bytedance/seedance-v2/pro \
+runcomfy run bytedance/seedance-2.0/pro \
   --input-file 01-prompts/episode-01-arterial-nightmare/seedance-input.json \
   --output-dir 04-generations/video/episode-01
 ```

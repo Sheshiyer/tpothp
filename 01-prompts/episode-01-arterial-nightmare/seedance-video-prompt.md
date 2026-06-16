@@ -4,7 +4,7 @@ Use after generating/uploading the Episode 01 character + storyboard board as th
 
 ## RunComfy Endpoint
 
-`bytedance/seedance-v2/pro`
+`bytedance/seedance-2.0/pro`
 
 Recommended schema:
 

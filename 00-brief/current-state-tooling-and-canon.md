@@ -92,7 +92,7 @@ RunComfy GPT Image 2 remains available, but only when explicitly selected.
 
 Default video route for strict multimodal reference consistency:
 
-- RunComfy Seedance 2.0 Pro: `bytedance/seedance-v2/pro`.
+- RunComfy Seedance 2.0 Pro API model id: `bytedance/seedance-2.0/pro`.
 
 Prerequisites before any Seedance run:
 

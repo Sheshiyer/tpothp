@@ -16,7 +16,7 @@ Local source path:
 
 `04-generations/images/episode-01-seedance-keyframe-01.png`
 
-Use this URL in `image_url` for `bytedance/seedance-v2/pro`.
+Use this URL in `image_url` for `bytedance/seedance-2.0/pro`.
 
 ## Folder Map
 
