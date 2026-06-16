@@ -71,6 +71,8 @@ Use the AI Anime Storytelling Workflow skill to plan, prompt, generate, and orga
 - [ ] Attach generated character/storyboard image as strict visual reference.
 - [x] Check RunComfy auth with `runcomfy whoami`.
 - [x] Create dry-run Seedance input template.
+- [x] Create public GitHub repo for Seedance keyframe hosting.
+- [x] Verify public raw GitHub keyframe URL.
 - [ ] Generate first 4–15s clip via RunComfy Seedance 2.0 Pro.
 - [ ] Store generated videos under `04-generations/video/`.
 
@@ -125,3 +127,5 @@ Processed existing source docs into project setup, series brief, episode product
 2026-06-16 Seedance keyframe prep: live Taste Cortex retrieval remains unresolved because this project only has prepared ingestion records and no runnable retrieval command in the vault. The local `.agents` index exposes NVIDIA NIM probe/client scripts, but not a completed project-local search pipeline for these records. Proceeded with the recorded retrieval queries as documented prompt-lock basis and added `01-prompts/episode-01-arterial-nightmare/seedance-keyframe-01-prompt.md` for one no-typography Pichet + Maya cinematic still.
 
 2026-06-16 Seedance keyframe generation: first Codex request failed with server overload, one retry succeeded. Generated `04-generations/images/episode-01-seedance-keyframe-01.png` at 1672x941, 2637233 bytes, SHA-256 `6eb7361fae1df09a72aae6b0cf890c608048645ad44d7bf1b3816663e9be857f`. Logged result at `logs/2026-06-16-episode-01-seedance-keyframe-01.md`. This is now the best local image reference for the first Seedance run after hosting/uploading to a public URL.
+
+2026-06-16 GitHub public repo pass: initialized a nested repo for the TPoTHP workspace, curated the public surface with `.gitignore`, created `Sheshiyer/tpothp` as a public GitHub repository, pushed `main`, and verified the raw keyframe URL returns `200 image/png`. Public Seedance keyframe URL: `https://raw.githubusercontent.com/Sheshiyer/tpothp/main/04-generations/images/episode-01-seedance-keyframe-01.png`. Logged result at `logs/2026-06-16-github-public-repo.md`.
