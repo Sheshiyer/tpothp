@@ -80,8 +80,8 @@ Use the AI Anime Storytelling Workflow skill to plan, prompt, generate, and orga
 
 - [x] Draft ElevenLabs voice direction.
 - [x] Draft Suno-style score prompt.
-- [ ] Generate or import audio assets.
-- [ ] Store generated/imported audio under `04-generations/audio/`.
+- [x] Generate or import audio assets.
+- [x] Store generated/imported audio under `04-generations/audio/`.
 
 ## Phase 5 — Edit + Delivery
 
@@ -131,3 +131,5 @@ Processed existing source docs into project setup, series brief, episode product
 2026-06-16 GitHub public repo pass: initialized a nested repo for the TPoTHP workspace, curated the public surface with `.gitignore`, created `Sheshiyer/tpothp` as a public GitHub repository, pushed `main`, and verified the raw keyframe URL returns `200 image/png`. Public Seedance keyframe URL: `https://raw.githubusercontent.com/Sheshiyer/tpothp/main/04-generations/images/episode-01-seedance-keyframe-01.png`. Logged result at `logs/2026-06-16-github-public-repo.md`.
 
 2026-06-16 Seedance run 01: created `01-prompts/episode-01-arterial-nightmare/seedance-input.json` using the public GitHub keyframe URL. First RunComfy attempt with `bytedance/seedance-v2/pro` failed with 404; live RunComfy docs show the API model id is `bytedance/seedance-2.0/pro`. Reran successfully with request ID `6f21c6f0-4a25-49ee-b720-ac33b9323f5d`. Downloaded `04-generations/video/episode-01/e5ef985b222de7858d80763a7873b4a3_1781627474_siay9jex.mp4`, 1280x720, 24 fps, 15.092971s, AAC audio, SHA-256 `bbbda4f8f77107f12597f56f07c064435e5326fdab07cfeeb5af007e2e0856e3`. Logged result at `logs/2026-06-16-episode-01-seedance-run-01.md`.
+
+2026-06-16 Audio generation pass: generated Episode 01 score via ElevenLabs Music on RunComfy (`elevenlabs/elevenlabs/music-generation`, request ID `f4bc9b6a-dda7-4340-afd0-c0cdb8989f8b`). Generated Pichet voice line via Composio ElevenLabs TTS using Chris voice (charming, down-to-earth). Generated Maya voice line using Jessica voice (playful, bright, warm). All three audio files stored under `04-generations/audio/episode-01/`: score (15.05s), Pichet line (5.80s), Maya line (2.88s). Logged result at `logs/2026-06-16-episode-01-audio-generation.md`.
