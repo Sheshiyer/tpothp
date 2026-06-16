@@ -1,0 +1,28 @@
+.DS_Store
+**/.DS_Store
+
+# Local credentials and environment files
+.env
+.env.*
+*.pem
+*.key
+
+# Private/source planning documents
+*.docx
+02-references/source-docs/
+
+# Copied workflow examples; keep project-specific references only
+02-references/ai-anime-storytelling-workflow/
+*.mp4
+*.mov
+*.wav
+*.mp3
+
+# Large local model/source media not needed for public URL hosting
+pichet.glb
+03-assets/source-media/
+04-generations/video/
+04-generations/audio/
+
+# Local scratch outputs
+*.local.json

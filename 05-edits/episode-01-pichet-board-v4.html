@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pichet - Daily Practice Board V4</title>
+  <style>
+    @import url("https://api.fontshare.com/v2/css?f[]=panchang@500,600,700,800&f[]=satoshi@300,400,500,700&display=swap");
+
+    :root {
+      --void: #070b1d;
+      --parchment: #f0ede3;
+      --silver: #8a9ba8;
+      --gold: #c5a017;
+      --emerald: #10b5a7;
+      --display: "Panchang", "Arial Black", sans-serif;
+      --body: "Satoshi", Inter, Arial, sans-serif;
+      --mono: "SF Mono", "Menlo", "Consolas", monospace;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      width: 1536px;
+      height: 1024px;
+      overflow: hidden;
+      background: var(--void);
+      color: var(--parchment);
+      font-family: var(--body);
+    }
+
+    .stage {
+      position: relative;
+      width: 1536px;
+      height: 1024px;
+      overflow: hidden;
+      isolation: isolate;
+      background: var(--void);
+    }
+
+    .art {
+      position: absolute;
+      inset: 0;
+      width: 1536px;
+      height: 1024px;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .stage::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      background:
+        linear-gradient(90deg, rgba(7, 11, 29, 0.02), transparent 18%, transparent 82%, rgba(7, 11, 29, 0.08)),
+        linear-gradient(180deg, rgba(7, 11, 29, 0.06), transparent 22%, transparent 86%, rgba(7, 11, 29, 0.20));
+    }
+
+    .type-shield {
+      position: absolute;
+      z-index: 2;
+      background: linear-gradient(180deg, rgba(7, 11, 29, 0.92), rgba(7, 11, 29, 0.62) 70%, transparent);
+      border-bottom: 1px solid rgba(197, 160, 23, 0.18);
+      pointer-events: none;
+    }
+
+    .identity-shield { left: 568px; top: 24px; width: 324px; height: 124px; }
+    .turn-shield { left: 906px; top: 24px; width: 608px; height: 34px; }
+    .expr-shield { left: 906px; top: 475px; width: 608px; height: 42px; }
+    .repair-shield { left: 17px; top: 699px; width: 1046px; height: 40px; }
+    .plaque-shield { left: 1078px; top: 699px; width: 435px; height: 40px; }
+
+    .display {
+      position: absolute;
+      z-index: 3;
+      margin: 0;
+      font-family: var(--display);
+      text-transform: uppercase;
+      color: var(--parchment);
+      text-shadow: 0 0 24px rgba(7, 11, 29, 0.84);
+    }
+
+    .section {
+      position: absolute;
+      z-index: 3;
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 1;
+      letter-spacing: 0.20em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-shadow: 0 0 18px rgba(7, 11, 29, 0.95);
+    }
+
+    .mono {
+      position: absolute;
+      z-index: 3;
+      font-family: var(--mono);
+      font-size: 10px;
+      line-height: 1;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--silver);
+      text-shadow: 0 0 14px rgba(7, 11, 29, 0.96);
+    }
+
+    .pichet {
+      left: 588px;
+      top: 44px;
+      width: 286px;
+      font-weight: 800;
+      font-size: 40px;
+      line-height: 0.96;
+      letter-spacing: 0.18em;
+    }
+
+    .daily {
+      left: 590px;
+      top: 104px;
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .engine {
+      left: 590px;
+      top: 656px;
+      width: 286px;
+      padding: 9px 10px;
+      background: rgba(7, 11, 29, 0.78);
+      border: 1px solid rgba(197, 160, 23, 0.34);
+      text-align: center;
+    }
+
+    .palette-label { left: 812px; width: 70px; text-align: center; }
+    .void { top: 245px; }
+    .gold { top: 334px; }
+    .emerald { top: 425px; }
+    .parchment { top: 516px; }
+
+    .turn { left: 924px; top: 39px; }
+    .expr { left: 924px; top: 489px; }
+    .repair { left: 33px; top: 715px; }
+    .plaque { left: 1094px; top: 715px; }
+
+    .kit-label {
+      top: 957px;
+      width: 148px;
+      padding: 7px 6px 6px;
+      background: rgba(7, 11, 29, 0.82);
+      border-top: 1px solid rgba(197, 160, 23, 0.28);
+      text-align: center;
+      font-size: 9px;
+    }
+
+    .k1 { left: 40px; }
+    .k2 { left: 216px; }
+    .k3 { left: 392px; }
+    .k4 { left: 568px; }
+    .k5 { left: 744px; }
+    .k6 { left: 914px; }
+
+    .plaque-note {
+      left: 1160px;
+      top: 943px;
+      width: 280px;
+      padding: 9px 10px;
+      background: rgba(7, 11, 29, 0.82);
+      border-top: 1px solid rgba(197, 160, 23, 0.28);
+      text-align: center;
+    }
+
+    .footer {
+      position: absolute;
+      left: 32px;
+      right: 32px;
+      bottom: 10px;
+      z-index: 3;
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(138, 155, 168, 0.82);
+    }
+
+    .corner {
+      position: absolute;
+      z-index: 3;
+      width: 20px;
+      height: 20px;
+      opacity: 0.85;
+      border-color: var(--parchment);
+    }
+    .tl { left: 0; top: 0; border-left: 1px solid; border-top: 1px solid; }
+    .tr { right: 0; top: 0; border-right: 1px solid; border-top: 1px solid; }
+    .bl { left: 0; bottom: 0; border-left: 1px solid; border-bottom: 1px solid; }
+    .br { right: 0; bottom: 0; border-right: 1px solid; border-bottom: 1px solid; }
+  </style>
+</head>
+<body>
+  <main class="stage">
+    <img class="art" src="../04-generations/images/episode-01-pichet-character-sheet-design-system-03.png" alt="Pichet design-system art layer" />
+
+    <div class="type-shield identity-shield"></div>
+    <div class="type-shield turn-shield"></div>
+    <div class="type-shield expr-shield"></div>
+    <div class="type-shield repair-shield"></div>
+    <div class="type-shield plaque-shield"></div>
+
+    <h1 class="display pichet">PICHET</h1>
+    <div class="section daily">Daily Practice</div>
+    <div class="mono engine">Biorhythm + Vedic Clock + Panchanga</div>
+
+    <div class="mono palette-label void">Void</div>
+    <div class="mono palette-label gold">Gold</div>
+    <div class="mono palette-label emerald">Emerald</div>
+    <div class="mono palette-label parchment">Parchment</div>
+
+    <div class="section turn">Turnaround System</div>
+    <div class="section expr">Expression States</div>
+    <div class="section repair">Repair Kit</div>
+    <div class="section plaque">Rhythm Plaque</div>
+
+    <div class="mono kit-label k1">Pressure Gauge</div>
+    <div class="mono kit-label k2">Copper Wrench</div>
+    <div class="mono kit-label k3">Folded Cloth</div>
+    <div class="mono kit-label k4">Repair Chalk</div>
+    <div class="mono kit-label k5">Sealing Thread</div>
+    <div class="mono kit-label k6">Utility Pouch</div>
+    <div class="mono plaque-note">Reflection / Inquiry / Witness</div>
+
+    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    <div class="footer"><span>Tryambakam Noesis / The Humble Psychic Plumber</span><span>Not prediction. Reflection. Inquiry. Witness.</span></div>
+  </main>
+</body>
+</html>

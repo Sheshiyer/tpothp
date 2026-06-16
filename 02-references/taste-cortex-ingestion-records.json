@@ -1,0 +1,69 @@
+{
+  "schema": "taste-cortex-design-memory-records-v0",
+  "created": "2026-06-15",
+  "project": "tryambakam-noesis/tpothp",
+  "embedding_model_preference": "nvidia/nv-embed-v1",
+  "records": [
+    {
+      "asset_id": "pichet-model-glb",
+      "path": "pichet.glb",
+      "media_type": "model/gltf-binary",
+      "role": "primary-identity-reference",
+      "caption": "Pichet 3D model reference for silhouette, body logic, grounded posture, and repair-worker physicality.",
+      "prompt_context": "Use as a strict character identity anchor for Pichet; preserve grounded plumber body language and practical tool-world.",
+      "tags": ["Pichet", "character", "identity", "3d-reference", "plumber", "grounded", "Noesis"],
+      "flows": ["character-design", "image-generation", "video-reference"],
+      "colors": [],
+      "dimensions": null,
+      "bytes": 44816716,
+      "sha256": "bcba6740b458e65b1f3166ecdd0f0d721ebdb574f5d9080e3c80059d90216c8c"
+    },
+    {
+      "asset_id": "pichet-primary-portrait",
+      "path": "pichet.png",
+      "media_type": "image/png",
+      "role": "primary-identity-reference",
+      "caption": "Primary Pichet portrait reference for face logic, emotional bearing, color, and identity continuity.",
+      "prompt_context": "Preserve Pichet's face, calm practical expression, mature working-adult presence, and humble non-guru demeanor.",
+      "tags": ["Pichet", "portrait", "identity", "face-reference", "Noesis", "psychic-plumber"],
+      "flows": ["character-design", "gpt-image", "seedance-reference"],
+      "colors": ["deep ink", "skin warmth", "workwear neutrals"],
+      "dimensions": { "width": 1024, "height": 1024 },
+      "bytes": 2082252,
+      "sha256": "757cb8ebabc0eec3282901d561224f54758e0228ea773b714e2ab33aca75efbb"
+    },
+    {
+      "asset_id": "pichet-anime-style-reference",
+      "path": "anime-charc.png",
+      "media_type": "image/png",
+      "role": "style-and-character-reference",
+      "caption": "Anime character reference with alpha for stylization, silhouette translation, and clean character-board treatment.",
+      "prompt_context": "Use for anime production-board treatment while keeping Pichet anchored to the primary portrait and model references.",
+      "tags": ["Pichet", "anime", "style-reference", "character-board", "transparent-background"],
+      "flows": ["character-design", "gpt-image", "style-retrieval"],
+      "colors": ["deep ink", "bone", "aged gold"],
+      "dimensions": { "width": 1024, "height": 1024 },
+      "bytes": 1878895,
+      "sha256": "18528586bbdf85e6d80498d61d2ac8f7c3c53b6644104c2fa0be90cb1e62f036"
+    },
+    {
+      "asset_id": "selemene-daily-practice-anchor",
+      "path": "../Selemene-engine/README.md#daily-practice",
+      "media_type": "text/markdown",
+      "role": "canon-anchor",
+      "caption": "Daily Practice workflow anchor: Panchanga, Vedic Clock, and Biorhythm as timing and rhythm mirrors.",
+      "prompt_context": "Frame The Arterial Nightmare as a rhythm-and-timing mirror: not prediction, reflection, inquiry, witness.",
+      "tags": ["Selemene", "daily-practice", "Panchanga", "Vedic Clock", "Biorhythm", "reflection-first"],
+      "flows": ["canon-retrieval", "prompt-lock", "episode-01"],
+      "colors": ["aged gold", "deep ink", "bone"],
+      "dimensions": null,
+      "bytes": null,
+      "sha256": null
+    }
+  ],
+  "retrieval_queries": [
+    "Pichet humble psychic plumber grounded repair-worker anime production board",
+    "Selemene daily-practice biorhythm vedic clock arterial city reflection witness",
+    "Noesis sacred geometry anatomical municipal infrastructure aged gold deep ink"
+  ]
+}

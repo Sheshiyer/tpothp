@@ -1,0 +1,10 @@
+{
+  "prompt": "Paste the approved prompt from 01-prompts/episode-01-arterial-nightmare/seedance-video-prompt.md after the keyframe still is hosted at a public URL.",
+  "image_url": [
+    "https://raw.githubusercontent.com/Sheshiyer/tpothp/main/04-generations/images/episode-01-seedance-keyframe-01.png"
+  ],
+  "aspect_ratio": "16:9",
+  "duration": 15,
+  "resolution": "720p",
+  "generate_audio": true
+}
